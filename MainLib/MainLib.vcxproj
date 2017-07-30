@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
+    <ClInclude Include="IOBase.h" />
     <ClInclude Include="LSystem.h" />
     <ClInclude Include="LSystemView.h" />
   </ItemGroup>

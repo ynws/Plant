@@ -17,10 +17,7 @@ void LSystem::SetInitialString(std::string str)
 
 void LSystem::AddRule(std::string from, std::string to)
 {
-	Rule rule;
-	// TODO: スマートに
-	rule.from = from.c_str()[0];
-	rule.to = to;
+	Rule rule{ from.c_str()[0], to };
 	rules.push_back(rule);
 }
 

@@ -18,7 +18,9 @@ echo "## build test"
 echo "################################################################################"
 g++ -std=c++11 -O2 -fno-exceptions -W -Wall ../UnitTest/*.cpp \
     -DLINUX -fprofile-arcs -ftest-coverage -I../MainLib libstatic.a \
-    -I${GTEST}/googletest/include ${GMLIB}/gtest/libgtest.a ${GMLIB}/gtest/libgtest_main.a \
+    -I${GTEST}/googletest/include -I${GTEST}/googlemock/include \
+    ${GMLIB}/gtest/libgtest.a ${GMLIB}/gtest/libgtest_main.a \
+    ${GMLIB}/libgmock.a ${GMLIB}/libgmock_main.a \
     -lpthread -o test
 
 echo "################################################################################"

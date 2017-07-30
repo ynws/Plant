@@ -11,34 +11,20 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MainLib", "MainLib\MainLib.
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DB7CF214-3177-480B-8560-A52980B6FEFE}.Debug|x64.ActiveCfg = Debug|x64
-		{DB7CF214-3177-480B-8560-A52980B6FEFE}.Debug|x64.Build.0 = Debug|x64
 		{DB7CF214-3177-480B-8560-A52980B6FEFE}.Debug|x86.ActiveCfg = Debug|Win32
 		{DB7CF214-3177-480B-8560-A52980B6FEFE}.Debug|x86.Build.0 = Debug|Win32
-		{DB7CF214-3177-480B-8560-A52980B6FEFE}.Release|x64.ActiveCfg = Release|x64
-		{DB7CF214-3177-480B-8560-A52980B6FEFE}.Release|x64.Build.0 = Release|x64
 		{DB7CF214-3177-480B-8560-A52980B6FEFE}.Release|x86.ActiveCfg = Debug|Win32
 		{DB7CF214-3177-480B-8560-A52980B6FEFE}.Release|x86.Build.0 = Debug|Win32
-		{746BE393-F970-45CB-85AB-E44950E2EF6A}.Debug|x64.ActiveCfg = Debug|x64
-		{746BE393-F970-45CB-85AB-E44950E2EF6A}.Debug|x64.Build.0 = Debug|x64
 		{746BE393-F970-45CB-85AB-E44950E2EF6A}.Debug|x86.ActiveCfg = Debug|Win32
 		{746BE393-F970-45CB-85AB-E44950E2EF6A}.Debug|x86.Build.0 = Debug|Win32
-		{746BE393-F970-45CB-85AB-E44950E2EF6A}.Release|x64.ActiveCfg = Release|x64
-		{746BE393-F970-45CB-85AB-E44950E2EF6A}.Release|x64.Build.0 = Release|x64
 		{746BE393-F970-45CB-85AB-E44950E2EF6A}.Release|x86.ActiveCfg = Release|Win32
 		{746BE393-F970-45CB-85AB-E44950E2EF6A}.Release|x86.Build.0 = Release|Win32
-		{04ADF8C7-FD18-48EA-A185-65E234E04DA8}.Debug|x64.ActiveCfg = Debug|x64
-		{04ADF8C7-FD18-48EA-A185-65E234E04DA8}.Debug|x64.Build.0 = Debug|x64
 		{04ADF8C7-FD18-48EA-A185-65E234E04DA8}.Debug|x86.ActiveCfg = Debug|Win32
 		{04ADF8C7-FD18-48EA-A185-65E234E04DA8}.Debug|x86.Build.0 = Debug|Win32
-		{04ADF8C7-FD18-48EA-A185-65E234E04DA8}.Release|x64.ActiveCfg = Release|x64
-		{04ADF8C7-FD18-48EA-A185-65E234E04DA8}.Release|x64.Build.0 = Release|x64
 		{04ADF8C7-FD18-48EA-A185-65E234E04DA8}.Release|x86.ActiveCfg = Release|Win32
 		{04ADF8C7-FD18-48EA-A185-65E234E04DA8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection

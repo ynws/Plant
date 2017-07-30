@@ -1,5 +1,5 @@
-#include "DxLib.h"
 #include "Game.h"
+#include "DxlibIO.h"
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	LPSTR lpCmdLine, int nCmdShow)
@@ -11,8 +11,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	if (DxLib_Init() == -1) { return -1; }
 	SetDrawScreen(DX_SCREEN_BACK); // ï`âÊêÊâÊñ Çó†âÊñ Ç…ÉZÉbÉg
 
+	DxlibIO io;
 	LSystem model("F-F-F-F", "F", "F-F+F+FF-F-F+F");
-	LSystemView view(&model);
+	LSystemView view(&io, &model);
 	Game controller(&view, &model);
 
 	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0)
