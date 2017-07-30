@@ -21,6 +21,8 @@ L-systemで植物を描くテスト
         + Initialize
         + NextStep
         + GetString
+* パラメタ色々変えてテスト
+* 植物描写用にカスタマイズ
 
 ## DONE
 

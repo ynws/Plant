@@ -1,9 +1,8 @@
 #include "LSystem.h"
 
-LSystem::LSystem(std::string init_string, std::string from, std::string to)
+LSystem::LSystem(std::string init_string)
 {
 	init_string_ = init_string;
-	AddRule(from, to);
 }
 
 LSystem::~LSystem()

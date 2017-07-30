@@ -11,8 +11,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	if (DxLib_Init() == -1) { return -1; }
 	SetDrawScreen(DX_SCREEN_BACK); // 描画先画面を裏画面にセット
 
+	LSystem model("-F");	// コッホ曲線
+	model.AddRule("F", "F+F-F-F+F");
+
 	DxlibIO io;
-	LSystem model("F-F-F-F", "F", "F-F+F+FF-F-F+F");
 	LSystemView view(&io, &model);
 	Game controller(&view, &model);
 
@@ -20,7 +22,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	{
 		controller.Update();
 		ClearDrawScreen();
-		view.Draw();
+		view.Draw(5);
 		ScreenFlip();
 	}
 

@@ -3,7 +3,7 @@
 
 TEST(Game, init) {
 	MockIO mock;
-	LSystem model("F-F-F-F", "F", "F-F+F+FF-F-F+F");
+	LSystem model("F-F-F-F");
 	LSystemView view(&mock, &model);
 	Game controller(&view, &model);
 	controller.Update();

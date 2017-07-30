@@ -19,6 +19,6 @@ public:
 	void SetInitX(int initx) { initx_ = initx; }
 	void SetInitY(int inity) { inity_ = inity; }
 
-	void Draw();
+	void Draw(int ticks);
 };
 

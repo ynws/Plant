@@ -13,7 +13,7 @@ private:
 	std::string init_string_;
 	std::vector<Rule> rules;
 public:
-	LSystem(std::string init_string, std::string from, std::string to);
+	LSystem(std::string init_string);
 	~LSystem();
 	void SetInitialString(std::string str);
 	void AddRule(std::string from, std::string to);

@@ -1,5 +1,4 @@
 #pragma once
-#include "LSystem.h"
 #include "LSystemView.h"
 
 class Game
