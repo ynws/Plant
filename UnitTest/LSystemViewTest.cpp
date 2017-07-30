@@ -11,7 +11,7 @@ TEST(LSview, Draw)
 	LSystemView view(&mock, &model);
 
 	EXPECT_CALL(mock, DrawLine(600, 360, 600, 353, 0, 1)).Times(1);
-	EXPECT_CALL(mock, DrawLine(607, 352, 607, 345, 0, 1)).Times(1);
+	EXPECT_CALL(mock, DrawLine(593, 352, 593, 345, 0, 1)).Times(1);
 	view.Draw(0);
 }
 

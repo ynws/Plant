@@ -14,10 +14,10 @@ private:
 public:
 	LSystemView(IOBase *io, LSystem *lsystem);
 	~LSystemView();
-	void SetStepSize(int size) { size_ = size; }
-	void SetAngle(int angle) { angle_ = angle; }
-	void SetInitX(int initx) { initx_ = initx; }
-	void SetInitY(int inity) { inity_ = inity; }
+	LSystemView& SetStepSize(int size) { size_ = size; return *this; }
+	LSystemView& SetAngle(int angle) { angle_ = angle; return *this; }
+	LSystemView& SetInitX(int initx) { initx_ = initx; return *this; }
+	LSystemView& SetInitY(int inity) { inity_ = inity; return *this; }
 
 	void Draw(int ticks);
 };

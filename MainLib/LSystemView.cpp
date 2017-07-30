@@ -21,15 +21,17 @@ void LSystemView::Draw(int ticks)
 {
 	double x = initx_;
 	double y = inity_;
-	int angle = 0;	// 上向き
+	int angle = 90;	// 上向き(Dxlibでは、yがマイナスされる方向)
 
 	std::string str = lsystem_->GetString(ticks);
 	// TODO: 複数文字に対応
 	for (size_t i = 0; i < str.length(); i++) {
-		double nextx = x + (size_*sin(angle*PI / 180));
-		double nexty = y - (size_*cos(angle*PI / 180));
+		double nextx = x + (size_*cos(angle*PI / 180));
+		double nexty = y - (size_*sin(angle*PI / 180));
 		switch (str[i]) {
 		case 'F':	// 線を書きながら進む
+		case 'A':
+		case 'B':
 			io_->DrawLine((int)x, (int)y, (int)nextx, (int)nexty, 0, 1);
 			x = nextx;
 			y = nexty;

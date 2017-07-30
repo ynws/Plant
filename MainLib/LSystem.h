@@ -15,8 +15,8 @@ private:
 public:
 	LSystem(std::string init_string);
 	~LSystem();
-	void SetInitialString(std::string str);
-	void AddRule(std::string from, std::string to);
+	LSystem& SetInitialString(std::string str);
+	LSystem& AddRule(std::string from, std::string to);
 	void ClearRule();
 	std::string GetString(int ticks);
 };

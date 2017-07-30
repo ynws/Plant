@@ -9,15 +9,17 @@ LSystem::~LSystem()
 {
 }
 
-void LSystem::SetInitialString(std::string str)
+LSystem& LSystem::SetInitialString(std::string str)
 {
 	init_string_ = str;
+	return *this;
 }
 
-void LSystem::AddRule(std::string from, std::string to)
+LSystem& LSystem::AddRule(std::string from, std::string to)
 {
 	Rule rule{ from.c_str()[0], to };
 	rules.push_back(rule);
+	return *this;
 }
 
 void LSystem::ClearRule()
