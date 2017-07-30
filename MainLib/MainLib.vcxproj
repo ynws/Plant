@@ -115,11 +115,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="LSystem.cpp" />
+    <ClCompile Include="LSystemView.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IOStatus.h" />
-    <ClInclude Include="Player.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="LSystem.h" />
+    <ClInclude Include="LSystemView.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

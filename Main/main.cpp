@@ -1,6 +1,5 @@
 #include "DxLib.h"
-#include "Player.h"
-#include "DxlibIO.h"
+#include "Game.h"
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	LPSTR lpCmdLine, int nCmdShow)
@@ -12,18 +11,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	if (DxLib_Init() == -1) { return -1; }
 	SetDrawScreen(DX_SCREEN_BACK); // ï`âÊêÊâÊñ Çó†âÊñ Ç…ÉZÉbÉg
 
-	DxlibIO io;
-	Player player(10, 10);
+	LSystem model;
+	LSystemView view(&model);
+	Game controller(&view, &model);
 
 	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0)
 	{
-		int key = io.GetCursorInput(DX_INPUT_KEY_PAD1);
-		player.move(key);
-
+		controller.Update();
 		ClearDrawScreen();
-
-		io.DrawCircle(player.getx() * 3, player.gety() * 3, 10, GetColor(255,255,255), TRUE);
-
+		view.Draw();
 		ScreenFlip();
 	}
 

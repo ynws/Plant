@@ -1,4 +1,26 @@
 # Plant
+L-systemで植物を描くテスト
 
-なんかの本で読んだ、GAを使った画像描画プログラムを作ってみる
+参考: http://aidiary.hatenablog.com/entry/20131126/1385466122
+
+## TODO
+* 基本クラス作成
+    - Game(C)
+        + Update
+        + Draw
+    - LSystemView(V)
+        + SetStepSize
+        + SetAngle
+        + SetInitX
+        + SetInitY
+        + DrawLSystem
+    - LSystem(M)
+        + SetInitialString
+        + AddRule
+        + ClearRule
+        + Initialize
+        + NextStep
+        + GetString
+
+## DONE
 

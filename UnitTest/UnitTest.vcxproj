@@ -160,7 +160,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="PlayerTest.cpp" />
+    <ClCompile Include="GameTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MainLib\MainLib.vcxproj">
