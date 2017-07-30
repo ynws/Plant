@@ -161,6 +161,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GameTest.cpp" />
+    <ClCompile Include="LSystemTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MainLib\MainLib.vcxproj">

@@ -11,7 +11,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	if (DxLib_Init() == -1) { return -1; }
 	SetDrawScreen(DX_SCREEN_BACK); // •`‰ææ‰æ–Ê‚ğ— ‰æ–Ê‚ÉƒZƒbƒg
 
-	LSystem model;
+	LSystem model("F-F-F-F", "F", "F-F+F+FF-F-F+F");
 	LSystemView view(&model);
 	Game controller(&view, &model);
 
