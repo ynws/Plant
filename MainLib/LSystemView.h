@@ -15,10 +15,10 @@ public:
 	LSystemView(IOBase *io, LSystem *lsystem);
 	~LSystemView();
 	int GetStepSize() { return size_; }
-	LSystemView& SetStepSize(int size);
-	LSystemView& SetAngle(int angle) { angle_ = angle; return *this; }
-	LSystemView& SetInitX(int initx) { initx_ = initx; return *this; }
-	LSystemView& SetInitY(int inity) { inity_ = inity; return *this; }
+	LSystemView& SetStepSize(const int size);
+	LSystemView& SetAngle(const int angle) { angle_ = angle; return *this; }
+	LSystemView& SetInitX(const int initx) { initx_ = initx; return *this; }
+	LSystemView& SetInitY(const int inity) { inity_ = inity; return *this; }
 
 	void Draw(int ticks);
 };

@@ -1,10 +1,8 @@
 #include "Game.h"
 
-Game::Game(IOBase *io, LSystemView *lsystemview, LSystem *lsystem)
+Game::Game(IOBase *io, LSystemView *lsystemview, LSystem *lsystem) :
+	io_(io), view_(lsystemview), lsystem_(lsystem)
 {
-	io_ = io;
-	view_ = lsystemview;
-	lsystem_ = lsystem;
 }
 
 void Game::Update()

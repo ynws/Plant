@@ -1,21 +1,20 @@
 #include "LSystem.h"
 
-LSystem::LSystem(std::string init_string)
+LSystem::LSystem(const std::string& init_string) : init_string_(init_string)
 {
-	init_string_ = init_string;
 }
 
 LSystem::~LSystem()
 {
 }
 
-LSystem& LSystem::SetInitialString(std::string str)
+LSystem& LSystem::SetInitialString(const std::string& str)
 {
 	init_string_ = str;
 	return *this;
 }
 
-LSystem& LSystem::AddRule(std::string from, std::string to)
+LSystem& LSystem::AddRule(const std::string& from, const std::string& to)
 {
 	Rule rule{ from.c_str()[0], to };
 	rules.push_back(rule);
@@ -27,12 +26,12 @@ void LSystem::ClearRule()
 	rules.clear();
 }
 
-std::string LSystem::GetString(int ticks)
+std::string LSystem::GetString(const int ticks)
 {
 	std::string ret = init_string_;
 	for (int t = 0; t < ticks; t++) {
 		std::string buf;
-		// ものすごくバカっぽいループを回している気がする
+		// TODO: 要改良。ものすごくバカっぽいループを回している気がする
 		for (int i = 0; i < (int)ret.size(); ++i) {
 			char c = ret[i];
 			bool hit = false;

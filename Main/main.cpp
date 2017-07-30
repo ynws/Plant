@@ -5,6 +5,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	LPSTR lpCmdLine, int nCmdShow)
 {
 	SetOutApplicationLogValidFlag(false);	// ログを出力しない
+	// TODO: Viewは解像度に依存すべき
 	SetGraphMode(640, 480, 16);			// 解像度
 	ChangeWindowMode(true);				// ウィンドウモード
 	SetBackgroundColor(255, 255, 255);	// 背景色
@@ -17,6 +18,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	LSystemView view(&io, &model);
 	Game controller(&io, &view, &model);
 
+	// TODO: controllerで設定すべき？
 	model.SetInitialString("A").AddRule("A", "A+B+").AddRule("B", "-A-B");
 	view.SetInitX(340).SetInitY(150).SetStepSize(4);
 	ticks = 12;

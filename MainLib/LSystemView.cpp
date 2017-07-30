@@ -3,10 +3,8 @@
 
 #define PI 3.14159265
 
-LSystemView::LSystemView(IOBase *io, LSystem *lsystem)
+LSystemView::LSystemView(IOBase *io, LSystem *lsystem) : io_(io), lsystem_(lsystem)
 {
-	io_ = io;
-	lsystem_ = lsystem;
 	size_ = 7;
 	angle_ = 90;
 	initx_ = 600;
@@ -17,7 +15,7 @@ LSystemView::~LSystemView()
 {
 }
 
-LSystemView & LSystemView::SetStepSize(int size)
+LSystemView & LSystemView::SetStepSize(const int size)
 {
 	if (size > 1) {
 		size_ = size;
@@ -29,7 +27,7 @@ LSystemView & LSystemView::SetStepSize(int size)
 	return *this;
 }
 
-void LSystemView::Draw(int ticks)
+void LSystemView::Draw(const int ticks)
 {
 	double x = initx_;
 	double y = inity_;
