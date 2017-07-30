@@ -14,7 +14,8 @@ private:
 public:
 	LSystemView(IOBase *io, LSystem *lsystem);
 	~LSystemView();
-	LSystemView& SetStepSize(int size) { size_ = size; return *this; }
+	int GetStepSize() { return size_; }
+	LSystemView& SetStepSize(int size);
 	LSystemView& SetAngle(int angle) { angle_ = angle; return *this; }
 	LSystemView& SetInitX(int initx) { initx_ = initx; return *this; }
 	LSystemView& SetInitY(int inity) { inity_ = inity; return *this; }

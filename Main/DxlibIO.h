@@ -8,4 +8,7 @@ public:
 	DxlibIO();
 	~DxlibIO();
 	int DrawLine(int x1, int y1, int x2, int y2, unsigned int Color, int Thickness);
+	int GetMousePoint(int *XBuf, int *YBuf);
+	int	GetMouseInput(void);
+	int GetMouseWheelRotVol();
 };

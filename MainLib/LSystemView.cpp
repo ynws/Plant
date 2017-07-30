@@ -17,6 +17,18 @@ LSystemView::~LSystemView()
 {
 }
 
+LSystemView & LSystemView::SetStepSize(int size)
+{
+	if (size > 1) {
+		size_ = size;
+	}
+	else {
+		// w’è‚ª¬‚³‚·‚¬‚éê‡AÅ¬’l‚Ü‚Åk¬
+		size_ = 2;
+	}
+	return *this;
+}
+
 void LSystemView::Draw(int ticks)
 {
 	double x = initx_;

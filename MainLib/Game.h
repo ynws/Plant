@@ -4,9 +4,10 @@
 class Game
 {
 private:
-	LSystemView *lsystemview_;
+	IOBase *io_;
+	LSystemView *view_;
 	LSystem *lsystem_;
 public:
-	Game(LSystemView *lsystemview, LSystem *lsystem);
+	Game(IOBase *io, LSystemView *lsystemview, LSystem *lsystem);
 	void Update();
 };
