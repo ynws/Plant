@@ -46,3 +46,25 @@ TEST(LSview, SetStepSizeMin)
 	view.SetStepSize(1);
 	ASSERT_EQ(view.GetStepSize(), 2);
 }
+
+TEST(LSview, Stack)
+{
+	MockIO mock;
+	// ó‘Ô•Û‘¶‚µ‚Ä‚©‚çˆÚ“®BÅŒã‚É‰Šúó‘Ô‚Å•`Ê
+	LSystem model("[Ff+]F");
+	LSystemView view(&mock, &model);
+
+	EXPECT_CALL(mock, DrawLine(600, 360, 600, 353, 0, 1)).Times(2);
+	view.Draw(0);
+}
+
+TEST(LSview, StackEmpty)
+{
+	MockIO mock;
+	// 2‰ñ–Ú‚Ìî•ñæ‚èo‚µ‚Í‚Å‚«‚È‚¢‚Ì‚ÅA–³‹‚·‚é
+	LSystem model("[Ff+]]F");
+	LSystemView view(&mock, &model);
+
+	EXPECT_CALL(mock, DrawLine(600, 360, 600, 353, 0, 1)).Times(2);
+	view.Draw(0);
+}

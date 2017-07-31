@@ -8,7 +8,7 @@ private:
 	IOBase *io_;
 	LSystem *lsystem_;
 	int size_;
-	int angle_;
+	double angle_;
 	int initx_;
 	int inity_;
 public:
@@ -16,7 +16,7 @@ public:
 	~LSystemView();
 	int GetStepSize() { return size_; }
 	LSystemView& SetStepSize(const int size);
-	LSystemView& SetAngle(const int angle) { angle_ = angle; return *this; }
+	LSystemView& SetAngle(const double angle) { angle_ = angle; return *this; }
 	LSystemView& SetInitX(const int initx) { initx_ = initx; return *this; }
 	LSystemView& SetInitY(const int inity) { inity_ = inity; return *this; }
 

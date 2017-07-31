@@ -2,5 +2,6 @@
 Release/
 Debug/
 
+*.log
 *.user
 Log.txt

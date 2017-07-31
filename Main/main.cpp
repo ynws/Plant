@@ -19,9 +19,20 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	Game controller(&io, &view, &model);
 
 	// TODO: controllerÇ≈ê›íËÇ∑Ç◊Ç´ÅH
-	model.SetInitialString("A").AddRule("A", "A+B+").AddRule("B", "-A-B");
-	view.SetInitX(340).SetInitY(150).SetStepSize(4);
-	ticks = 12;
+	// model.SetInitialString("A").AddRule("A", "A+B+").AddRule("B", "-A-B");
+	// view.SetInitX(340).SetInitY(150).SetStepSize(4);
+	// ticks = 12;
+
+	// êAï®Ç¢ÇÎÇ¢ÇÎ
+	// model.SetInitialString("F").AddRule("F", "F[+F]F[-F]F");
+
+	model.SetInitialString("F").AddRule("F", "FF-[-F+F+F]+[+F-F-F]");
+	view.SetInitX(320).SetInitY(480).SetAngle(22.5);
+	ticks = 4;
+
+	// model.SetInitialString("X").AddRule("X", "F-[[X]+X]+F[+FX]-X").AddRule("F", "FF");
+	// view.SetInitX(320).SetInitY(480).SetAngle(22.5).SetStepSize(12);
+	// ticks = 5;
 
 	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0)
 	{
