@@ -1,8 +1,6 @@
 #include "MockIO.h"
 #include "Game.h"
 
-using ::testing::Return;
-
 class GameTest : public ::testing::Test
 {
 protected:
@@ -38,4 +36,23 @@ TEST_F(GameTest, NoZoom) {
 	EXPECT_CALL(mock, GetMouseWheelRotVol()).Times(1).WillRepeatedly(Return(0));
 	controller.Update();
 	ASSERT_EQ(view.GetStepSize(), 10);
+}
+
+// Updateを2回呼び、Viewの位置を動かす。
+TEST_F(GameTest, ViewMove) {
+	// 2回とも左クリックしている
+	EXPECT_CALL(mock, MouseLeftClicked())
+		.Times(2)
+		.WillRepeatedly(Return(true));
+	// それぞれのマウス位置を設定
+	EXPECT_CALL(mock, GetMousePoint(_, _))
+		.Times(2)
+		.WillOnce(DoAll(SetArgPointee<0>(20), SetArgPointee<1>(30), Return(0)))
+		.WillOnce(DoAll(SetArgPointee<0>(30), SetArgPointee<1>(10), Return(0)));
+
+	view.SetInitX(10).SetInitY(10);
+	controller.Update();	// 初回マウス位置を記録
+	controller.Update();	// 次に呼ばれたときマウスのずれ分だけ移動
+	ASSERT_EQ(view.GetInitX(), 20);
+	ASSERT_EQ(view.GetInitY(), -10);
 }

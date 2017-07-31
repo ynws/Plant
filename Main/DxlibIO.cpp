@@ -18,9 +18,14 @@ int DxlibIO::GetMousePoint(int * XBuf, int * YBuf)
 	return DxLib::GetMousePoint(XBuf, YBuf);
 }
 
-int DxlibIO::GetMouseInput(void)
+bool DxlibIO::MouseLeftClicked(void)
 {
-	return DxLib::GetMouseInput();
+	return DxLib::GetMouseInput() & MOUSE_INPUT_LEFT;
+}
+
+bool DxlibIO::MouseRightClicked(void)
+{
+	return DxLib::GetMouseInput() & MOUSE_INPUT_RIGHT;
 }
 
 int DxlibIO::GetMouseWheelRotVol()

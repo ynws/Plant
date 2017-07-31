@@ -1,8 +1,6 @@
 #include "MockIO.h"
 #include "LSystemView.h"
 
-using ::testing::_; // ”CˆÓ‚Ìˆø”
-
 TEST(LSview, Draw)
 {
 	MockIO mock;

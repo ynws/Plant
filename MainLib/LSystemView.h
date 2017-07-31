@@ -15,6 +15,8 @@ public:
 	LSystemView(IOBase *io, LSystem *lsystem);
 	~LSystemView();
 	int GetStepSize() { return size_; }
+	int GetInitX() { return initx_; }
+	int GetInitY() { return inity_; }
 	LSystemView& SetStepSize(const int size);
 	LSystemView& SetAngle(const double angle) { angle_ = angle; return *this; }
 	LSystemView& SetInitX(const int initx) { initx_ = initx; return *this; }
