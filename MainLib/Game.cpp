@@ -10,10 +10,10 @@ void Game::Update()
 	mouse_.Update();
 	// Šg‘åk¬
 	if (mouse_.GetWheel() > 0) {
-		view_->SetStepSize((int)(view_->GetStepSize() * 1.5));
+		view_->SetScale((int)(view_->GetScale() * 1.5));
 	}
 	else if (mouse_.GetWheel() < 0) {
-		view_->SetStepSize((int)(view_->GetStepSize() * 0.5));
+		view_->SetScale((int)(view_->GetScale() * 0.5));
 	}
 
 	// •`‰æˆÊ’u‚Ì’²®

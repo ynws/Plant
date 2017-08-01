@@ -15,27 +15,27 @@ public:
 };
 
 TEST_F(GameTest, ZoomIn) {
-	view.SetStepSize(10);
+	view.SetScale(10);
 	// マウスホイール回転によりViewが拡大する
 	EXPECT_CALL(mock, GetMouseWheelRotVol()).Times(1).WillRepeatedly(Return(1));
 	controller.Update();
-	ASSERT_EQ(view.GetStepSize(), 15);
+	ASSERT_EQ(view.GetScale(), 15);
 }
 
 TEST_F(GameTest, ZoomOut) {
-	view.SetStepSize(10);
+	view.SetScale(10);
 	// マウスホイール回転によりViewが縮小する
 	EXPECT_CALL(mock, GetMouseWheelRotVol()).Times(1).WillRepeatedly(Return(-1));
 	controller.Update();
-	ASSERT_EQ(view.GetStepSize(), 5);
+	ASSERT_EQ(view.GetScale(), 5);
 }
 
 TEST_F(GameTest, NoZoom) {
-	view.SetStepSize(10);
+	view.SetScale(10);
 	// マウスホイール回転なし
 	EXPECT_CALL(mock, GetMouseWheelRotVol()).Times(1).WillRepeatedly(Return(0));
 	controller.Update();
-	ASSERT_EQ(view.GetStepSize(), 10);
+	ASSERT_EQ(view.GetScale(), 10);
 }
 
 // Updateを2回呼び、Viewの位置を動かす。

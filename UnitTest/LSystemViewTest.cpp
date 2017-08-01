@@ -9,7 +9,23 @@ TEST(LSview, Draw)
 	LSystemView view(&mock, &model);
 
 	EXPECT_CALL(mock, DrawLine(600, 360, 600, 353, 0, 1)).Times(1);
-	EXPECT_CALL(mock, DrawLine(593, 352, 593, 345, 0, 1)).Times(1);
+	EXPECT_CALL(mock, DrawLine(594, 353, 594, 346, 0, 1)).Times(1);
+	view.Draw(0);
+}
+
+TEST(LSview, SetAngle)
+{
+	MockIO mock;
+	// 左回転して1歩進む
+	LSystem model("+F");
+	LSystemView view(&mock, &model);
+
+	EXPECT_CALL(mock, DrawLine(600, 360, 593, 360, 0, 1)).Times(1);
+	view.Draw(0);
+
+	// 角度指定で逆向きになる
+	model.SetAngle(-90.0);
+	EXPECT_CALL(mock, DrawLine(600, 360, 607, 360, 0, 1)).Times(1);
 	view.Draw(0);
 }
 
@@ -28,10 +44,10 @@ TEST(LSview, SetStepSize)
 	MockIO mock;
 	LSystem model("");
 	LSystemView view(&mock, &model);
-	view.SetStepSize(10);
-	ASSERT_EQ(view.GetStepSize(), 10);
-	view.SetStepSize(5);
-	ASSERT_EQ(view.GetStepSize(), 5);
+	view.SetScale(10);
+	ASSERT_EQ(view.GetScale(), 10);
+	view.SetScale(5);
+	ASSERT_EQ(view.GetScale(), 5);
 }
 
 TEST(LSview, SetStepSizeMin)
@@ -39,10 +55,10 @@ TEST(LSview, SetStepSizeMin)
 	MockIO mock;
 	LSystem model("");
 	LSystemView view(&mock, &model);
-	view.SetStepSize(10);
+	view.SetScale(10);
 	// 指定が小さすぎる場合、最小値までリサイズ
-	view.SetStepSize(1);
-	ASSERT_EQ(view.GetStepSize(), 2);
+	view.SetScale(1);
+	ASSERT_EQ(view.GetScale(), 2);
 }
 
 TEST(LSview, Stack)
