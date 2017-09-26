@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.12
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest", "UnitTest\UnitTest.vcxproj", "{DB7CF214-3177-480B-8560-A52980B6FEFE}"
 EndProject
@@ -9,26 +9,61 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Main", "Main\Main.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MainLib", "MainLib\MainLib.vcxproj", "{04ADF8C7-FD18-48EA-A185-65E234E04DA8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MainAndroid", "MainAndroid", "{F595DFFD-630F-4868-8580-61877398AC20}"
+EndProject
+Project("{39E2626F-3545-4960-A6E8-258AD8476CE5}") = "MainAndroid.Packaging", "MainAndroid\MainAndroid.Packaging\MainAndroid.Packaging.androidproj", "{1AFC8B4A-1B1A-4401-95A2-C062B037FD58}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MainAndroid.NativeActivity", "MainAndroid\MainAndroid.NativeActivity\MainAndroid.NativeActivity.vcxproj", "{3C158E9A-447E-4CCC-B942-B472E2D48E2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
 		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB7CF214-3177-480B-8560-A52980B6FEFE}.Debug|ARM.ActiveCfg = Debug|Win32
 		{DB7CF214-3177-480B-8560-A52980B6FEFE}.Debug|x86.ActiveCfg = Debug|Win32
 		{DB7CF214-3177-480B-8560-A52980B6FEFE}.Debug|x86.Build.0 = Debug|Win32
+		{DB7CF214-3177-480B-8560-A52980B6FEFE}.Release|ARM.ActiveCfg = Release|Win32
 		{DB7CF214-3177-480B-8560-A52980B6FEFE}.Release|x86.ActiveCfg = Debug|Win32
 		{DB7CF214-3177-480B-8560-A52980B6FEFE}.Release|x86.Build.0 = Debug|Win32
+		{746BE393-F970-45CB-85AB-E44950E2EF6A}.Debug|ARM.ActiveCfg = Debug|Win32
 		{746BE393-F970-45CB-85AB-E44950E2EF6A}.Debug|x86.ActiveCfg = Debug|Win32
 		{746BE393-F970-45CB-85AB-E44950E2EF6A}.Debug|x86.Build.0 = Debug|Win32
+		{746BE393-F970-45CB-85AB-E44950E2EF6A}.Release|ARM.ActiveCfg = Release|Win32
 		{746BE393-F970-45CB-85AB-E44950E2EF6A}.Release|x86.ActiveCfg = Release|Win32
 		{746BE393-F970-45CB-85AB-E44950E2EF6A}.Release|x86.Build.0 = Release|Win32
+		{04ADF8C7-FD18-48EA-A185-65E234E04DA8}.Debug|ARM.ActiveCfg = Debug|Win32
 		{04ADF8C7-FD18-48EA-A185-65E234E04DA8}.Debug|x86.ActiveCfg = Debug|Win32
 		{04ADF8C7-FD18-48EA-A185-65E234E04DA8}.Debug|x86.Build.0 = Debug|Win32
+		{04ADF8C7-FD18-48EA-A185-65E234E04DA8}.Release|ARM.ActiveCfg = Release|Win32
 		{04ADF8C7-FD18-48EA-A185-65E234E04DA8}.Release|x86.ActiveCfg = Release|Win32
 		{04ADF8C7-FD18-48EA-A185-65E234E04DA8}.Release|x86.Build.0 = Release|Win32
+		{1AFC8B4A-1B1A-4401-95A2-C062B037FD58}.Debug|ARM.ActiveCfg = Debug|ARM
+		{1AFC8B4A-1B1A-4401-95A2-C062B037FD58}.Debug|ARM.Build.0 = Debug|ARM
+		{1AFC8B4A-1B1A-4401-95A2-C062B037FD58}.Debug|ARM.Deploy.0 = Debug|ARM
+		{1AFC8B4A-1B1A-4401-95A2-C062B037FD58}.Debug|x86.ActiveCfg = Debug|ARM
+		{1AFC8B4A-1B1A-4401-95A2-C062B037FD58}.Release|ARM.ActiveCfg = Release|ARM
+		{1AFC8B4A-1B1A-4401-95A2-C062B037FD58}.Release|ARM.Build.0 = Release|ARM
+		{1AFC8B4A-1B1A-4401-95A2-C062B037FD58}.Release|ARM.Deploy.0 = Release|ARM
+		{1AFC8B4A-1B1A-4401-95A2-C062B037FD58}.Release|x86.ActiveCfg = Release|ARM
+		{3C158E9A-447E-4CCC-B942-B472E2D48E2F}.Debug|ARM.ActiveCfg = Debug|ARM
+		{3C158E9A-447E-4CCC-B942-B472E2D48E2F}.Debug|ARM.Build.0 = Debug|ARM
+		{3C158E9A-447E-4CCC-B942-B472E2D48E2F}.Debug|x86.ActiveCfg = Debug|ARM
+		{3C158E9A-447E-4CCC-B942-B472E2D48E2F}.Release|ARM.ActiveCfg = Release|ARM
+		{3C158E9A-447E-4CCC-B942-B472E2D48E2F}.Release|ARM.Build.0 = Release|ARM
+		{3C158E9A-447E-4CCC-B942-B472E2D48E2F}.Release|x86.ActiveCfg = Release|ARM
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1AFC8B4A-1B1A-4401-95A2-C062B037FD58} = {F595DFFD-630F-4868-8580-61877398AC20}
+		{3C158E9A-447E-4CCC-B942-B472E2D48E2F} = {F595DFFD-630F-4868-8580-61877398AC20}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDA3795E-2FF7-4F11-BD87-59DA231CE77B}
 	EndGlobalSection
 EndGlobal

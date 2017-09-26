@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="srcMain">
+      <UniqueIdentifier>{27d63139-8490-4dad-8511-55b73304ec04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="srcMainLib">
+      <UniqueIdentifier>{57d912bd-3cec-4ba7-b9d2-0742188abc05}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Main\DxlibIO.cpp">
+      <Filter>srcMain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Main\main.cpp">
+      <Filter>srcMain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MainLib\Game.cpp">
+      <Filter>srcMainLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MainLib\LSystem.cpp">
+      <Filter>srcMainLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MainLib\LSystemView.cpp">
+      <Filter>srcMainLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\MainLib\Mouse.cpp">
+      <Filter>srcMainLib</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

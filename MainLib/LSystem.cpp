@@ -26,7 +26,7 @@ LSystem& LSystem::SetInitialString(const std::string& str)
 
 LSystem& LSystem::AddRule(const std::string& from, const std::string& to)
 {
-	Rule rule{ from.c_str()[0], to };
+	Rule rule = { from.c_str()[0], to };
 	rules.push_back(rule);
 	return *this;
 }

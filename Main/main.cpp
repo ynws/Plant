@@ -1,13 +1,19 @@
 #include "Game.h"
 #include "DxlibIO.h"
 
+#ifdef __ANDROID__
+int android_main(void)
+#else
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	LPSTR lpCmdLine, int nCmdShow)
+#endif
 {
 	SetOutApplicationLogValidFlag(false);	// ログを出力しない
 	// TODO: Viewは解像度に依存すべき
 	SetGraphMode(640, 480, 16);			// 解像度
+#ifndef __ANDROID__
 	ChangeWindowMode(true);				// ウィンドウモード
+#endif
 	SetBackgroundColor(255, 255, 255);	// 背景色
 	if (DxLib_Init() == -1) { return -1; }
 	SetDrawScreen(DX_SCREEN_BACK); // 描画先画面を裏画面にセット

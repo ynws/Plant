@@ -30,6 +30,10 @@ bool DxlibIO::MouseRightClicked(void)
 
 int DxlibIO::GetMouseWheelRotVol()
 {
+#ifdef __ANDROID__
+	return 0;
+#else
 	return DxLib::GetMouseWheelRotVol();
+#endif
 }
 
