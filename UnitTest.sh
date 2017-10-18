@@ -28,3 +28,16 @@ echo "## test"
 echo "################################################################################"
 ./test --gtest_output=xml:testresult.xml
 gcovr -r ~/workspace/Plant/MainLib -e ../UnitTest/ --xml --output=Coverage.xml .
+
+cd ..
+
+echo "################################################################################"
+echo "## cppcheck"
+echo "################################################################################"
+cppcheck --enable=all --inconclusive --xml --xml-version=2 MainLib 2> build/cppcheck.xml
+
+echo "################################################################################"
+echo "## doxygen"
+echo "################################################################################"
+doxygen
+
